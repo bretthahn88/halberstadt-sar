@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Description", name: "body", widget: "markdown" }
+
+  - name: "newsletters"
+    label: "Newsletters"
+    folder: "content/newsletters"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Issue Date", name: "date", widget: "datetime" }
+      - { label: "PDF File", name: "pdf", widget: "file" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+
+  - name: "minutes"
+    label: "Meeting Minutes"
+    folder: "content/minutes"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Meeting Date", name: "date", widget: "datetime" }
+      - { label: "PDF File", name: "pdf", widget: "file", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  - name: "history-posts"
+    label: "History Blog Posts"
+    folder: "content/history"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "patriot-biographies"
+    label: "Patriot Biographies"
+    folder: "content/patriots"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Birth Year", name: "birth_year", widget: "string", required: false }
+      - { label: "Death Year", name: "death_year", widget: "string", required: false }
+      - { label: "Portrait", name: "portrait", widget: "image", required: false }
+      - { label: "Service", name: "service", widget: "string" }
+      - { label: "Biography", name: "body", widget: "markdown" }
