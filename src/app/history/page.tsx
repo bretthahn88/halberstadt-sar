@@ -9,10 +9,14 @@ export const metadata: Metadata = {
 export default function HistoryPage() {
   return (
     <div className="pt-16">
-      {/* Header */}
-      <section className="py-20 bg-navy text-parchment">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-4">History</h1>
+      {/* Hero */}
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="/videos/SAR_history_page_hero_video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-navy/50" />
+        <div className="relative z-10 text-center px-4">
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-parchment mb-4">History</h1>
           <p className="text-parchment/70 text-lg">The American Revolution and Fort Wayne&apos;s frontier role</p>
           <div className="mt-4 mx-auto w-16 h-0.5 bg-gold" />
         </div>
@@ -53,6 +57,46 @@ export default function HistoryPage() {
             <p>
               Clark&apos;s conquests helped secure American claims to the Northwest Territory in the 1783 Treaty of Paris, directly leading to the creation of Indiana and the other states carved from this vast region.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Fort Wayne and the Revolution */}
+      <section className="py-20 bg-navy text-parchment">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <SectionHeading title="Fort Wayne and the Revolution" light />
+          <div className="space-y-4 text-parchment/80 text-lg leading-relaxed">
+            <p>
+              While the most famous battles of the American Revolution took place along the eastern seaboard, the war extended deep into the frontier. The land that would become Indiana was contested territory, home to the Miami, Shawnee, and other nations, and a strategic prize for both British and American forces.
+            </p>
+            <p>
+              In 1779, Colonel George Rogers Clark led a legendary expedition through the Illinois Country. His audacious winter march to Fort Vincennes (Fort Sackville) stunned the British garrison under Lieutenant Governor Henry Hamilton. Clark&apos;s capture of Vincennes secured the Northwest Territory for the American cause and laid the groundwork for Indiana&apos;s future statehood.
+            </p>
+            <p>
+              The Three Rivers area, where Fort Wayne now stands, was the heart of the Miami Confederacy and a vital crossroads of trade and military routes. The struggles and alliances formed here during the Revolution shaped the region for decades to come.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* The Illinois Campaign */}
+      <section className="py-20 bg-parchment">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <SectionHeading title="The Illinois Campaign" />
+          <div className="grid md:grid-cols-[45%_1fr] gap-8 items-start">
+            <div>
+              <img
+                src="/images/Fall_of_Fort_Sackville.jpg"
+                alt="The Fall of Fort Sackville by F.C. Yohn, 1905"
+                className="w-full h-auto rounded-lg"
+              />
+              <p className="text-navy/50 text-sm italic mt-3 text-center">The Fall of Fort Sackville. F.C. Yohn, 1905</p>
+            </div>
+            <div className="space-y-4 text-navy/80 text-lg leading-relaxed">
+              <p>
+                The Illinois Campaign, also known as Clark&apos;s Northwestern Campaign, was a series of engagements during the American Revolutionary War in which a small force of Virginia militia led by George Rogers Clark seized control of several British outposts in the region northwest of the Ohio River in what is now Illinois and Indiana. The campaign is the best-known action of the western theater of the war and the source of Clark&apos;s reputation as an early American military hero.
+              </p>
+            </div>
           </div>
         </div>
       </section>

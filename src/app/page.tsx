@@ -13,7 +13,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/videos/SAR_herovideo_1.mp4" type="video/mp4" />
+          <source src="/videos/SAR_homepage_hero_video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-navy/50" />
         <div className="relative z-10 text-center px-4">
@@ -21,7 +21,7 @@ export default function Home() {
             Anthony Halberstadt Chapter
           </h1>
           <p className="text-lg sm:text-xl text-parchment/80 mb-8 font-light">
-            Sons of the American Revolution &mdash; Fort Wayne, Indiana
+            Sons of the American Revolution. Fort Wayne, Indiana
           </p>
           <Link
             href="/join"
@@ -49,19 +49,47 @@ export default function Home() {
 
       {/* Halberstadt Story */}
       <section className="py-20 bg-navy text-parchment">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <SectionHeading title="Our Namesake" light />
-          <div className="space-y-4 text-parchment/80 text-lg leading-relaxed">
-            <p>
-              Anthony Halberstadt was a Hessian soldier, one of the German mercenaries hired by the British Crown to fight the American colonists. In the early morning hours of December 26, 1776, General George Washington led his troops across the icy Delaware River and surprised the Hessian garrison at the Battle of Trenton.
-            </p>
-            <p>
-              Halberstadt was among those captured. But rather than await prisoner exchange, he made a fateful choice: he turned his back on the Crown and joined the American cause. He served as a teamster for a Continental Army officer, hauling supplies and equipment through the campaigns that would win a nation its freedom.
-            </p>
-            <p>
-              After the war, Halberstadt settled in the new republic he had helped create. His descendant, Jim Halberstadt, would go on to found the Fort Wayne chapter of the Sons of the American Revolution, naming it in honor of the Hessian soldier who chose liberty.
-            </p>
+          <div className="grid md:grid-cols-[45%_1fr] gap-8 items-start">
+            <div>
+              <img
+                src="/images/Jim_Halberstadt_1.png"
+                alt="Jim Halberstadt receives the chapter gavel, July 19, 1969"
+                className="w-full h-auto rounded-lg sepia brightness-90"
+              />
+              <p className="text-parchment/50 text-sm italic mt-3 text-center">Jim Halberstadt receives the chapter gavel. July 19, 1969</p>
+            </div>
+            <div className="space-y-4 text-parchment/80 text-lg leading-relaxed">
+              <p>
+                Anthony Halberstadt was a Hessian soldier, one of the German mercenaries hired by the British Crown to fight the American colonists. In the early morning hours of December 26, 1776, General George Washington led his troops across the icy Delaware River and surprised the Hessian garrison at the Battle of Trenton.
+              </p>
+              <p>
+                Halberstadt was among those captured. But rather than await prisoner exchange, he made a fateful choice: he turned his back on the Crown and joined the American cause. He served as a teamster for a Continental Army officer, hauling supplies and equipment through the campaigns that would win a nation its freedom.
+              </p>
+              <p>
+                After the war, Halberstadt settled in the new republic he had helped create. His descendant, Jim Halberstadt, would go on to found the Fort Wayne chapter of the Sons of the American Revolution, naming it in honor of the Hessian soldier who chose liberty.
+              </p>
+              <a
+                href="/about"
+                className="inline-block mt-4 bg-gold text-navy px-8 py-3 font-semibold rounded hover:bg-gold/90 transition-colors"
+              >
+                Discover Our Full History
+              </a>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Washington Crossing the Delaware */}
+      <section className="relative h-[500px] overflow-hidden">
+        <img
+          src="/images/Washington_Crossing_the_Delaware.jpg"
+          alt="Washington Crossing the Delaware by Emanuel Leutze, 1851"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+          <p className="text-gold text-sm italic">Washington Crossing the Delaware. Emanuel Leutze, 1851</p>
         </div>
       </section>
 
@@ -99,18 +127,27 @@ export default function Home() {
 
       {/* America 250 */}
       <section className="py-16 bg-colonial text-parchment">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-3">July 4, 2026</p>
-          <h2 className="font-serif text-3xl sm:text-5xl font-bold mb-4">America 250</h2>
-          <p className="text-parchment/80 text-lg max-w-2xl mx-auto">
-            The 250th anniversary of American independence is approaching. Join us as we commemorate a quarter millennium of the republic our patriot ancestors fought to create.
-          </p>
-          <Link
-            href="/join"
-            className="inline-block mt-8 bg-gold text-navy px-8 py-3 font-semibold rounded hover:bg-gold/90 transition-colors"
-          >
-            Join Before the 250th
-          </Link>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-[40%_1fr] gap-8 items-center">
+            <img
+              src="/images/America250_logo.png"
+              alt="America 250 logo"
+              className="w-full max-w-xs mx-auto md:max-w-none h-auto"
+            />
+            <div className="text-center md:text-left">
+              <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-3">July 4, 2026</p>
+              <h2 className="font-serif text-3xl sm:text-5xl font-bold mb-4">America 250</h2>
+              <p className="text-parchment/80 text-lg">
+                The 250th anniversary of American independence is approaching. Join us as we commemorate a quarter millennium of the republic our patriot ancestors fought to create.
+              </p>
+              <Link
+                href="/join"
+                className="inline-block mt-8 bg-gold text-navy px-8 py-3 font-semibold rounded hover:bg-gold/90 transition-colors"
+              >
+                Join Before the 250th
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

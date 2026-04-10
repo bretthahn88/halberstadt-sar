@@ -10,10 +10,14 @@ export const metadata: Metadata = {
 export default function JoinPage() {
   return (
     <div className="pt-16">
-      {/* Header */}
-      <section className="py-20 bg-navy text-parchment">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-4">Join the SAR</h1>
+      {/* Hero */}
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="/videos/SAR_herovideo_1.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-navy/50" />
+        <div className="relative z-10 text-center px-4">
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-parchment mb-4">Join the SAR</h1>
           <p className="text-parchment/70 text-lg">Take your place in the unbroken chain of American patriot heritage</p>
           <div className="mt-4 mx-auto w-16 h-0.5 bg-gold" />
         </div>
