@@ -2,6 +2,11 @@ import { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 
+export const metadata: Metadata = {
+  title: "About",
+  description: "Learn about the Anthony Halberstadt Chapter of the Sons of the American Revolution in Fort Wayne, Indiana. Chapter history, officers, and the frontier history of the American Revolution in Indiana.",
+};
+
 export default function AboutPage() {
   return (
     <div className="pt-16">

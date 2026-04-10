@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Chapter Officers",
